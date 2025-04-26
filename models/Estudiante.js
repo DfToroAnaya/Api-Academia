@@ -20,7 +20,7 @@ const Estudiante = sequelize.define('Estudiante', {
     }
   },
   fecha_nacimiento: {
-    type: DataTypes.DATEONLY,
+    type: DataTypes.DATE,
     allowNull: false
   }
 });
