@@ -11,9 +11,15 @@ const Curso = sequelize.define('Curso', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  descripcion: DataTypes.STRING,
-  duracion_horas: DataTypes.INTEGER
+  descripcion: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+  duracion_horas: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  }
 });
 
 module.exports = Curso;
-    
+

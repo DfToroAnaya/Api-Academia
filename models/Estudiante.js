@@ -11,8 +11,19 @@ const Estudiante = sequelize.define('Estudiante', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  descripcion: DataTypes.STRING,
-  duracion_horas: DataTypes.INTEGER
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+    validate: {
+      isEmail: true
+    }
+  },
+  fecha_nacimiento: {
+    type: DataTypes.DATEONLY,
+    allowNull: false
+  }
 });
 
 module.exports = Estudiante;
+
